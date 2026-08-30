@@ -1,5 +1,5 @@
 # Retail Demand Forecasting
-![Workflow Diagram](Workflow.png)
+![Workflow Diagram](Workflow.jpeg)
 ## Overview
 
 **Retail Demand Forecasting** is a demand forecasting and analytics system designed to help retail businesses understand historical sales patterns and predict future product demand.
