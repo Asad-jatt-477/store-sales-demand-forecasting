@@ -1,0 +1,80 @@
+{
+  "phase": "08",
+  "choice": "HistGB (sklearn)",
+  "members": [
+    {
+      "model": "HistGB (sklearn)",
+      "config": "tuned",
+      "params": {
+        "learning_rate": 0.0343057451464941,
+        "max_leaf_nodes": 389,
+        "min_samples_leaf": 183,
+        "l2_regularization": 0.0013017152714252655,
+        "max_features": 0.615254925671066,
+        "n_estimators": 1900
+      }
+    }
+  ],
+  "seeds": [
+    0
+  ],
+  "bias_multiplier": 1.0,
+  "features": [
+    "store_cat",
+    "family_cat",
+    "dow",
+    "dom",
+    "is_national_holiday",
+    "is_national_event",
+    "is_earthquake_period",
+    "onpromotion",
+    "same_wd_mean4",
+    "roll28_lag16",
+    "lag_364",
+    "roll7_lag16",
+    "lag_16",
+    "lag_21",
+    "month"
+  ],
+  "categorical_features": [
+    "store_cat",
+    "family_cat"
+  ],
+  "target": "target_log1p (= log1p(sales_clean))",
+  "trained_until": "2017-08-15",
+  "training_rows": 1336402,
+  "model_files": [
+    "models\\08_HistGB_s0.joblib"
+  ],
+  "zero_rules": [
+    "kabhi na biki series (cutoff tak sales history)",
+    "is_pre_opening",
+    "is_closure_calendar_day"
+  ],
+  "forecast_window": [
+    "2017-08-16",
+    "2017-08-31"
+  ],
+  "reproduce_check": {
+    "phase08_validation_wape": 11.4456,
+    "phase07_validation_wape_s0": 11.4456,
+    "match": "True"
+  },
+  "seed_average_test": {
+    "gain": 0.05609457320809526,
+    "windows_better": 5,
+    "adopted": false
+  },
+  "bias_test": {
+    "under_windows": 3,
+    "over_windows": 3,
+    "applied": false
+  },
+  "forecast_total_units": 12589900.811933994,
+  "forecast_vs_last4weeks": 0.9536212118892682,
+  "forecast_vs_lastyear_growth": 0.9681811041126054,
+  "history_ratio_aug16_31_vs_4weeks": {
+    "2015": 0.9858507432370722,
+    "2016": 0.9831066732558579
+  }
+}

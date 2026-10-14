@@ -1,0 +1,194 @@
+{
+  "best_single_model": "HistGB (sklearn)",
+  "phase07_candidates": [
+    "HistGB (sklearn)",
+    "LightGBM",
+    "XGBoost"
+  ],
+  "horizon_strategy_adopted": false,
+  "horizon_gain_days1_7_wape": -0.3794,
+  "noise": {
+    "WAPE": 0.2101,
+    "RMSLE": 0.00166
+  },
+  "summary": [
+    {
+      "model": "LightGBM horizon (din 1-7 lag>=7)",
+      "avg WAPE": 13.3671,
+      "avg RMSLE": 0.413,
+      "avg forecast/actual": 1.019,
+      "\u0394WAPE vs best": -0.0849,
+      "\u0394RMSLE vs best": -0.003,
+      "windows mein best se behtar (WAPE)": 3,
+      "faisla": "horizon test (Section 6)"
+    },
+    {
+      "model": "HistGB (sklearn)",
+      "avg WAPE": 13.452,
+      "avg RMSLE": 0.416,
+      "avg forecast/actual": 1.016,
+      "\u0394WAPE vs best": 0.0,
+      "\u0394RMSLE vs best": 0.0,
+      "windows mein best se behtar (WAPE)": 0,
+      "faisla": "BEST (single model)"
+    },
+    {
+      "model": "LightGBM",
+      "avg WAPE": 13.5263,
+      "avg RMSLE": 0.4161,
+      "avg forecast/actual": 1.0161,
+      "\u0394WAPE vs best": 0.0742,
+      "\u0394RMSLE vs best": 0.0001,
+      "windows mein best se behtar (WAPE)": 3,
+      "faisla": "BARABAR (noise hadd 0.210 ke andar) -> Phase 07 candidate"
+    },
+    {
+      "model": "XGBoost",
+      "avg WAPE": 13.5609,
+      "avg RMSLE": 0.4157,
+      "avg forecast/actual": 1.0168,
+      "\u0394WAPE vs best": 0.1089,
+      "\u0394RMSLE vs best": -0.0004,
+      "windows mein best se behtar (WAPE)": 1,
+      "faisla": "BARABAR (noise hadd 0.210 ke andar) -> Phase 07 candidate"
+    },
+    {
+      "model": "Baseline: seasonal naive",
+      "avg WAPE": 17.1167,
+      "avg RMSLE": 0.5533,
+      "avg forecast/actual": 0.9956,
+      "\u0394WAPE vs best": 3.6646,
+      "\u0394RMSLE vs best": 0.1373,
+      "windows mein best se behtar (WAPE)": 0,
+      "faisla": "baseline"
+    },
+    {
+      "model": "Ridge (linear)",
+      "avg WAPE": 22.397,
+      "avg RMSLE": 0.4911,
+      "avg forecast/actual": 1.0924,
+      "\u0394WAPE vs best": 8.945,
+      "\u0394RMSLE vs best": 0.075,
+      "windows mein best se behtar (WAPE)": 0,
+      "faisla": "peeche (noise hadd 0.210 se zyada)"
+    },
+    {
+      "model": "Baseline: 28-din average",
+      "avg WAPE": 23.0204,
+      "avg RMSLE": 0.5626,
+      "avg forecast/actual": 0.9692,
+      "\u0394WAPE vs best": 9.5684,
+      "\u0394RMSLE vs best": 0.1466,
+      "windows mein best se behtar (WAPE)": 0,
+      "faisla": "baseline"
+    }
+  ],
+  "skipped_models": [],
+  "windows": {
+    "Validation (Aug 2017)": [
+      "2017-07-30",
+      "2017-07-31"
+    ],
+    "Aug 2016": [
+      "2016-07-30",
+      "2016-07-31"
+    ],
+    "May 2016": [
+      "2016-05-17",
+      "2016-05-18"
+    ],
+    "Dec 2016": [
+      "2016-12-02",
+      "2016-12-03"
+    ],
+    "Jun 2017": [
+      "2017-06-14",
+      "2017-06-15"
+    ]
+  },
+  "features": [
+    "store_cat",
+    "family_cat",
+    "dow",
+    "dom",
+    "is_national_holiday",
+    "is_national_event",
+    "is_earthquake_period",
+    "onpromotion",
+    "same_wd_mean4",
+    "roll28_lag16",
+    "lag_364",
+    "roll7_lag16",
+    "lag_16",
+    "lag_21",
+    "month"
+  ],
+  "features_h7": [
+    "store_cat",
+    "family_cat",
+    "dow",
+    "dom",
+    "is_national_holiday",
+    "is_national_event",
+    "is_earthquake_period",
+    "onpromotion",
+    "h7_wd_mean4",
+    "h7_roll28",
+    "lag_364",
+    "h7_roll7",
+    "h7_lag_7",
+    "h7_lag_14",
+    "month"
+  ],
+  "bias_flag_families_validation": [
+    "SCHOOL AND OFFICE SUPPLIES"
+  ],
+  "model_seed_noise": {
+    "HistGB (sklearn)": {
+      "|\u0394WAPE| seed0-seed1": 0.0792,
+      "|\u0394RMSLE| seed0-seed1": 0.0006
+    },
+    "LightGBM": {
+      "|\u0394WAPE| seed0-seed1": 0.0483,
+      "|\u0394RMSLE| seed0-seed1": 0.0005
+    },
+    "XGBoost": {
+      "|\u0394WAPE| seed0-seed1": 0.1499,
+      "|\u0394RMSLE| seed0-seed1": 0.001
+    },
+    "Ridge (linear)": {
+      "|\u0394WAPE| seed0-seed1": 0.0,
+      "|\u0394RMSLE| seed0-seed1": 0.0
+    }
+  },
+  "overfitting_check": {
+    "HistGB (sklearn)": {
+      "WAPE training (aakhri 28 din)": 10.8572,
+      "WAPE validation (agle 16 din)": 12.1523,
+      "farq (val - train)": 1.2951,
+      "RMSLE training": 0.3724,
+      "RMSLE validation": 0.3959
+    },
+    "XGBoost": {
+      "WAPE training (aakhri 28 din)": 11.1502,
+      "WAPE validation (agle 16 din)": 12.3082,
+      "farq (val - train)": 1.158,
+      "RMSLE training": 0.3747,
+      "RMSLE validation": 0.3945
+    },
+    "LightGBM": {
+      "WAPE training (aakhri 28 din)": 11.1238,
+      "WAPE validation (agle 16 din)": 12.4171,
+      "farq (val - train)": 1.2933,
+      "RMSLE training": 0.3745,
+      "RMSLE validation": 0.3967
+    },
+    "Ridge (linear)": {
+      "WAPE training (aakhri 28 din)": 16.0054,
+      "WAPE validation (agle 16 din)": 20.1515,
+      "farq (val - train)": 4.1461,
+      "RMSLE training": 0.4317,
+      "RMSLE validation": 0.5331
+    }
+  }
+}

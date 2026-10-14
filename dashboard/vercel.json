@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api/forecast.py": {
+      "includeFiles": "api/assets/**",
+      "maxDuration": 30
+    }
+  }
+}

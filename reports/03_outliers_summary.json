@@ -1,0 +1,64 @@
+{
+  "scope_rows": 1308738,
+  "robust_z_extremes": 8267,
+  "iqr_outliers": 12572,
+  "causes": {
+    "H1 Same family, bohat se stores": 3752,
+    "L4 Isolated drop (stock-out / record nahi hua)": 1105,
+    "H5 Isolated spike (bulk order / ghalat entry)": 806,
+    "L1 Same family, bohat se stores": 766,
+    "H2 Poori company ka khaas din": 422,
+    "H4 Promotion surge": 384,
+    "L3 Store-wide kami (holiday aadat)": 372,
+    "L2 Poori company ka khaas din": 350,
+    "H3 Store-wide rush": 250,
+    "L0 Store takreeban band (disruption)": 67
+  },
+  "final_actions": [],
+  "actions": {
+    "none": 1300464,
+    "keep_real_event": 6296,
+    "replace_stockout_rejected_by_test": 961,
+    "cap_rejected_by_test": 806,
+    "keep_natural_low": 144,
+    "replace_disruption_rejected_by_test": 67
+  },
+  "rows_changed": 0,
+  "units_change_pct": 0.0,
+  "test_wape": {
+    "Validation (Aug 2017)": {
+      "Raw": 12.5677,
+      "Raw (seed 1, noise check)": 12.583,
+      "Cap (H5)": 12.6193,
+      "Replace (L4 + L0)": 12.5534
+    },
+    "Zalzale ke baad (May 2016)": {
+      "Raw": 17.4768,
+      "Raw (seed 1, noise check)": 17.3531,
+      "Cap (H5)": 17.8199,
+      "Replace (L4 + L0)": 17.4931
+    },
+    "Christmas se pehle (Dec 2016)": {
+      "Raw": 14.9467,
+      "Raw (seed 1, noise check)": 14.7172,
+      "Cap (H5)": 15.0439,
+      "Replace (L4 + L0)": 14.8043
+    },
+    "Aam window (Jun 2017)": {
+      "Raw": 11.0012,
+      "Raw (seed 1, noise check)": 11.0449,
+      "Cap (H5)": 11.0175,
+      "Replace (L4 + L0)": 11.025
+    }
+  },
+  "seed_noise_wape_points": 0.1031,
+  "thresholds": {
+    "z": 5.0,
+    "share": 0.2,
+    "day_share": 0.05,
+    "tx_high": 1.3,
+    "tx_low": 0.5,
+    "promo_x": 2.0,
+    "poisson_p": 0.001
+  }
+}

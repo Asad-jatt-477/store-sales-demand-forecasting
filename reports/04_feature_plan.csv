@@ -1,0 +1,38 @@
+feature,group,saboot (is notebook se),leakage-safe kyun,faisla
+store_nbr (category),static,Store ka size 10x tak alag; holiday ka asar har store par ulta-seedha (Sec 7),Kabhi nahi badalta,Keep
+family (category),static,Promo ka asar family par alag (Sec 9); 01b ablation,Kabhi nahi badalta,Keep
+"store_type, store_cluster, city",static,Store 52 (102 din) ke liye ummeed; family-mix 0.987 vs 0.944 (chhota farq) (Sec 10),Kabhi nahi badalta,Keep
+state,static,City ka mota group; regional holiday ka flag alag se hai (Sec 10),Kabhi nahi badalta,Ablation
+dow,calendar,"Sat +23.5%, Sun +21.5%, Thu -12.9%; dono saal wahi (corr 0.997) (Sec 2, 6)",Calendar pehle se maloom,Keep
+dom,calendar,"1 tareekh +18% (Jan/Dec hata kar bhi), mid-month -5%; dono saal corr 0.85 (Sec 2, 6)",Calendar pehle se maloom,Keep
+days_to_month_end,calendar,"31 tareekh +6%, 26-28 tareekh -5%: mahine ka aakhir alag din par aata hai (Sec 6)",Calendar pehle se maloom,Ablation
+month,calendar,"Dec +18%/+16.5%, Jan -13% dono saal (50 purane stores); Aug har saal alag (+1.2% / -2.6%) (Sec 6)",Calendar pehle se maloom,Ablation
+is_national_holiday,holiday,"Average +16.8%, median +8.7% (Sec 7)",Holidays file pehle se maloom,Keep
+is_holiday_season_day,holiday,+28% (Christmas/New Year ke din) (Sec 7),Holidays file pehle se maloom,Keep
+"is_national_event, is_earthquake_period",holiday,"Event +3%, zalzala +4.9%; April 2016 ko 'aam April' samajhne se bachata hai (Sec 6, 7)",Holidays file pehle se maloom,Keep
+"is_local_holiday, is_regional_holiday",holiday,Median asar ~0; regional sirf 474 rows (Sec 7),Holidays file pehle se maloom,Ablation
+is_workday_override,holiday,Clean period mein sirf 1 din (Sec 7),Holidays file pehle se maloom,Ablation
+store_holiday_effect,holiday (naya),"Har store ka asar -51% se +94%, aur dono periods mein corr 0.94 (Sec 7)",Sirf forecast se PEHLE ke holidays se banega,Ablation
+is_day_before_holiday,holiday (naya),"Christmas ke baghair +5.9% (9 din, 3 manfi): kamzor (Sec 8)",Holidays file pehle se maloom,Ablation
+is_carnaval_sunday,holiday (naya),-21.5% (clean period mein 2/2); forecast window mein nahi (Sec 8),Carnaval ki tareekh pehle se maloom,Ablation
+onpromotion,promotion,Within-series corr 0.150; family ke hisaab se 0.45 tak (Sec 9),Test file mein maujood (plan pehle se),Keep
+promo_ratio28,promotion (naya),"Normal se kam -2 se -4%, zyada +5 se +7%, 1.5x ke baad flat (Sec 9)",Pichle 28 din ka promo + aaj ka (dono maloom),Ablation
+same_wd_mean4,history,"Within-series corr 0.345, sab se mazboot (Sec 3)",Lag 21-42 (16+ din purane),Keep
+roll28_lag16,history,"Base level; base ka hissa (Sec 3, 4)",16+ din purana,Keep
+lag_364,history,"Base ke baad sab se zyada nayi info (partial 0.180); availability 87.4% (Sec 3a, 4)","364 din purana; band source = NaN, partial din sirf 4 kam-likhi families ke liye NaN",Keep
+roll7_lag16,history,Base ke baad partial 0.138: taaza level (Sec 4),16+ din purana,Keep
+lag_16,history,"Akele kamzor (0.108, alag weekday) lekin base ke baad 0.084 (Sec 3, 4)",Sab se taaza mumkin (16 din),Keep
+lag_21,history,"Within 0.290; base ke baad 0.066 (Sec 3, 4)",16+ din purana,Keep
+"roll14_lag16, ewm28_lag16",history,roll7 jaisi info (partial 0.124 / 0.092) (Sec 4),16+ din purana,Ablation
+lag_28,history,Base ke baad sirf 0.017 (Sec 4),16+ din purana,Ablation
+"lag_35, lag_42",history,"Base ke baad -0.038 / -0.047: ulti simt ki info (trend), taqat lag_21 jitni (Sec 4)",16+ din purana,Ablation
+roll56_lag16,history,Base ke baad -0.016: zero ke qareeb (Sec 4),16+ din purana,Drop
+"own_trend, fam_trend",history (naya),Base ke baad 0.128 / 0.110: rujhan (momentum) (Sec 11),16+ din purana,Ablation
+fam_roll28_lag16,history (group),Base ke baad -0.072: series ka family ke muqable level (ulti simt) (Sec 11),16+ din purana,Ablation
+store_roll28_lag16,history (group),Base ke baad 0.017: nayi info nahi (Sec 11),16+ din purana,Drop
+"zero_share28_lag16, std28_lag16",history (naya),Aaj zero se within-series corr 0.202 (global 0.776 zyada tar series ki pehchaan); std vs naive ghalti 0.456 (Sec 13),16+ din purana,Ablation
+days_since_open,store,Naye store pehle 2 hafte 1.2-2.3x; forecast window mein koi store ramp mein nahi (Sec 14),Opening date pehle se maloom,Ablation
+oil_price (har shakal),external,Trend hata kar corr 0.004-0.009 (Sec 12),-,Drop
+transactions (har shakal),external,Test mein nahi; purani tx ki base ke baad info -0.002 (Sec 12),-,Drop
+dead series / pre-opening / closure din = 0,rule,Phase 01/01b,Pehle se maloom,Rule (feature nahi)
+"is_trainable, is_store_closed, outlier_cause, is_outlier_treated, id, sales",target se bane,Sales se bane hain,LEAKAGE: kabhi feature nahi,Never

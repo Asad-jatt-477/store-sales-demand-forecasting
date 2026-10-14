@@ -1,0 +1,7 @@
+,pehle (sales),baad (sales_clean)
+mean,484.061,484.061
+median,33.0,33.0
+p99,6846.0,6846.0
+max,124717.0,124717.0
+zero share %,12.136,12.136
+skew (log1p),0.164,0.164

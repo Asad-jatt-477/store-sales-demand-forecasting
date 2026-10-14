@@ -1,0 +1,7 @@
+Wajah,Candidate rule,Kyun (data ki nature)
+"H1-H4: high, nishaan mila (family, company, store rush, promotion)",RAKHO,"Asli demand. Model ko yahi seekhna hai (Christmas, events, promotions)"
+"L1-L3: low, nishaan mila (calendar, company din, store ki holiday aadat)",RAKHO,Asli aur dohrane wala pattern. Features se predict ho sakta hai
+Intermittent series ke spikes,RAKHO,"Chhote numbers, seasonal, units ka < 0.01%"
+H5: isolated spike,CAP (z = 5 ki hadd tak),"Customers normal, koi aur nishaan nahi => bara order ya ghalat entry. Din 'high' hi rehta hai, bekaboo nahi"
+L4: isolated drop,"Normal (baseline) se badlo, agar Poisson test kahe ke qudrati utaar-charhao nahi","Maal khatam (stock-out) ya record nahi hua. Bikri kam hui, DEMAND kam nahi hui"
+L0: store takreeban band,Normal se badlo (us store-din ki dabi hui rows),"Store ki majboori, demand nahi. Closure jaisa"

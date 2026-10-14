@@ -1,0 +1,7 @@
+outlier_action,rows,units pehle,units candidate
+none,1300464,617653946.0,617653946.0
+keep_real_event,6296,13534147.0,13534147.0
+replace_stockout,961,65289.0,172610.0
+cap,806,2252336.0,1225872.0
+keep_natural_low,144,30.0,30.0
+replace_disruption,67,3403.0,51387.0

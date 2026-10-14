@@ -1,0 +1,273 @@
+{
+  "phase": "07",
+  "smoke": false,
+  "primary_metric": "WAPE",
+  "guard_metric": "RMSLE",
+  "choice": "HistGB (sklearn)",
+  "use_ensemble": false,
+  "members": [
+    {
+      "model": "HistGB (sklearn)",
+      "config": "tuned",
+      "params": {
+        "learning_rate": 0.0343057451464941,
+        "max_leaf_nodes": 389,
+        "min_samples_leaf": 183,
+        "l2_regularization": 0.0013017152714252655,
+        "max_features": 0.615254925671066,
+        "n_estimators": 1900
+      }
+    }
+  ],
+  "all_models": {
+    "LightGBM": {
+      "final_config": "tuned",
+      "default": {
+        "learning_rate": 0.07,
+        "num_leaves": 127,
+        "min_child_samples": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 0.0,
+        "n_estimators": 400
+      },
+      "tuned": {
+        "learning_rate": 0.04300418130481872,
+        "num_leaves": 266,
+        "min_child_samples": 63,
+        "subsample": 0.5869966239406517,
+        "colsample_bytree": 0.55304927974406,
+        "reg_lambda": 96.23880112107372,
+        "n_estimators": 1850
+      }
+    },
+    "XGBoost": {
+      "final_config": "tuned",
+      "default": {
+        "learning_rate": 0.07,
+        "max_leaves": 127,
+        "min_child_weight": 50,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_lambda": 1.0,
+        "n_estimators": 400
+      },
+      "tuned": {
+        "learning_rate": 0.033494758473134406,
+        "max_leaves": 351,
+        "min_child_weight": 208,
+        "subsample": 0.8540362888980227,
+        "colsample_bytree": 0.5102922471479012,
+        "reg_lambda": 70.72114131472235,
+        "n_estimators": 1950
+      }
+    },
+    "HistGB (sklearn)": {
+      "final_config": "tuned",
+      "default": {
+        "learning_rate": 0.07,
+        "max_leaf_nodes": 127,
+        "min_samples_leaf": 50,
+        "l2_regularization": 0.0,
+        "max_features": 1.0,
+        "n_estimators": 400
+      },
+      "tuned": {
+        "learning_rate": 0.0343057451464941,
+        "max_leaf_nodes": 389,
+        "min_samples_leaf": 183,
+        "l2_regularization": 0.0013017152714252655,
+        "max_features": 0.615254925671066,
+        "n_estimators": 1900
+      }
+    }
+  },
+  "histgb_note": "early_stopping=False (Phase 06 mein auto ON tha)",
+  "features": [
+    "store_cat",
+    "family_cat",
+    "dow",
+    "dom",
+    "is_national_holiday",
+    "is_national_event",
+    "is_earthquake_period",
+    "onpromotion",
+    "same_wd_mean4",
+    "roll28_lag16",
+    "lag_364",
+    "roll7_lag16",
+    "lag_16",
+    "lag_21",
+    "month"
+  ],
+  "categorical_features": [
+    "store_cat",
+    "family_cat"
+  ],
+  "target": "target_log1p (= log1p(sales_clean))",
+  "train_filter": "split == 'train' & is_trainable == 1 & date >= 2015-06-01",
+  "zero_rules": [
+    "is_dead_series",
+    "is_pre_opening",
+    "is_closure_calendar_day"
+  ],
+  "windows": {
+    "Jun 2017": [
+      "2017-06-14",
+      "2017-06-15"
+    ],
+    "Aug 2016": [
+      "2016-07-30",
+      "2016-07-31"
+    ],
+    "Dec 2016": [
+      "2016-12-02",
+      "2016-12-03"
+    ],
+    "May 2016": [
+      "2016-05-17",
+      "2016-05-18"
+    ],
+    "Validation (Aug 2017)": [
+      "2017-07-30",
+      "2017-07-31"
+    ],
+    "Holdout (15 Jul-30 Jul 2017)": [
+      "2017-07-14",
+      "2017-07-15"
+    ]
+  },
+  "tuning_folds": [
+    "Jun 2017",
+    "Aug 2016",
+    "Dec 2016",
+    "May 2016"
+  ],
+  "holdout": "Holdout (15 Jul-30 Jul 2017)",
+  "noise": {
+    "WAPE": 0.2101,
+    "RMSLE": 0.00166
+  },
+  "seeds": [
+    0,
+    1
+  ],
+  "scores": [
+    {
+      "window": "Jun 2017",
+      "role": "tuning fold",
+      "WAPE (khule)": 10.7511,
+      "RMSLE (khule)": 0.384,
+      "WAPE (saari rows)": 10.7511,
+      "RMSLE (saari rows)": 0.384,
+      "forecast/actual": 0.9717,
+      "LightGBM default (Phase 06) WAPE": 10.8792,
+      "seasonal naive WAPE": 13.3633
+    },
+    {
+      "window": "Aug 2016",
+      "role": "tuning fold",
+      "WAPE (khule)": 13.0362,
+      "RMSLE (khule)": 0.4175,
+      "WAPE (saari rows)": 13.1129,
+      "RMSLE (saari rows)": 0.4357,
+      "forecast/actual": 1.0607,
+      "LightGBM default (Phase 06) WAPE": 12.8381,
+      "seasonal naive WAPE": 15.1697
+    },
+    {
+      "window": "Dec 2016",
+      "role": "tuning fold",
+      "WAPE (khule)": 13.8932,
+      "RMSLE (khule)": 0.4416,
+      "WAPE (saari rows)": 13.8932,
+      "RMSLE (saari rows)": 0.4375,
+      "forecast/actual": 1.0063,
+      "LightGBM default (Phase 06) WAPE": 14.5323,
+      "seasonal naive WAPE": 19.2158
+    },
+    {
+      "window": "May 2016",
+      "role": "tuning fold",
+      "WAPE (khule)": 15.6097,
+      "RMSLE (khule)": 0.4396,
+      "WAPE (saari rows)": 15.6097,
+      "RMSLE (saari rows)": 0.4355,
+      "forecast/actual": 1.0197,
+      "LightGBM default (Phase 06) WAPE": 17.0097,
+      "seasonal naive WAPE": 19.5248
+    },
+    {
+      "window": "Validation (Aug 2017)",
+      "role": "faisla (tuning se bahar)",
+      "WAPE (khule)": 11.4357,
+      "RMSLE (khule)": 0.3965,
+      "WAPE (saari rows)": 11.4357,
+      "RMSLE (saari rows)": 0.3965,
+      "forecast/actual": 0.9932,
+      "LightGBM default (Phase 06) WAPE": 12.4526,
+      "seasonal naive WAPE": 18.3097
+    },
+    {
+      "window": "Holdout (15 Jul-30 Jul 2017)",
+      "role": "SIRF report (koi faisla nahi)",
+      "WAPE (khule)": 11.6908,
+      "RMSLE (khule)": 0.3972,
+      "WAPE (saari rows)": 11.6908,
+      "RMSLE (saari rows)": 0.3972,
+      "forecast/actual": 0.9447,
+      "LightGBM default (Phase 06) WAPE": 12.352,
+      "seasonal naive WAPE": 13.7303
+    }
+  ],
+  "decisions": [
+    {
+      "model": "LightGBM",
+      "faida tuning folds (WAPE)": 0.433,
+      "folds behtar": "3/4",
+      "faida validation": 0.3466,
+      "faida holdout (sirf report)": 0.2449,
+      "RMSLE badla (tuning folds)": 0.0013,
+      "noise hadd": 0.2101,
+      "faisla": "TUNED apnao"
+    },
+    {
+      "model": "XGBoost",
+      "faida tuning folds (WAPE)": 0.4582,
+      "folds behtar": "3/4",
+      "faida validation": 0.6333,
+      "faida holdout (sirf report)": 0.3527,
+      "RMSLE badla (tuning folds)": 0.0008,
+      "noise hadd": 0.2101,
+      "faisla": "TUNED apnao"
+    },
+    {
+      "model": "HistGB (sklearn)",
+      "faida tuning folds (WAPE)": 0.4474,
+      "folds behtar": "3/4",
+      "faida validation": 0.8789,
+      "faida holdout (sirf report)": 0.4992,
+      "RMSLE badla (tuning folds)": 0.0002,
+      "noise hadd": 0.2101,
+      "faisla": "TUNED apnao"
+    }
+  ],
+  "open_issues": [
+    {
+      "window": "Validation (Aug 2017)",
+      "SCHOOL forecast/actual": 0.2041,
+      "SCHOOL WAPE": 80.7282,
+      "Store 53 WAPE": 12.803,
+      "Store 53 seasonal naive WAPE": 15.4379,
+      "Store 53 forecast/actual": 1.0778
+    },
+    {
+      "window": "Holdout (15 Jul-30 Jul 2017)",
+      "SCHOOL forecast/actual": 0.2436,
+      "SCHOOL WAPE": 87.1467,
+      "Store 53 WAPE": 9.5156,
+      "Store 53 seasonal naive WAPE": 9.6039,
+      "Store 53 forecast/actual": 0.981
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+ "features": [
+  "store_cat",
+  "family_cat",
+  "dow",
+  "dom",
+  "is_national_holiday",
+  "is_national_event",
+  "is_earthquake_period",
+  "onpromotion",
+  "same_wd_mean4",
+  "roll28_lag16",
+  "lag_364",
+  "roll7_lag16",
+  "lag_16",
+  "lag_21",
+  "month"
+ ],
+ "categorical": [
+  "store_cat",
+  "family_cat"
+ ],
+ "categories": {
+  "store_cat": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54
+  ],
+  "family_cat": [
+   "AUTOMOTIVE",
+   "BABY CARE",
+   "BEAUTY",
+   "BEVERAGES",
+   "BOOKS",
+   "BREAD/BAKERY",
+   "CELEBRATION",
+   "CLEANING",
+   "DAIRY",
+   "DELI",
+   "EGGS",
+   "FROZEN FOODS",
+   "GROCERY I",
+   "GROCERY II",
+   "HARDWARE",
+   "HOME AND KITCHEN I",
+   "HOME AND KITCHEN II",
+   "HOME APPLIANCES",
+   "HOME CARE",
+   "LADIESWEAR",
+   "LAWN AND GARDEN",
+   "LINGERIE",
+   "LIQUOR,WINE,BEER",
+   "MAGAZINES",
+   "MEATS",
+   "PERSONAL CARE",
+   "PET SUPPLIES",
+   "PLAYERS AND ELECTRONICS",
+   "POULTRY",
+   "PREPARED FOODS",
+   "PRODUCE",
+   "SCHOOL AND OFFICE SUPPLIES",
+   "SEAFOOD"
+  ]
+ },
+ "category_dtype": {
+  "store_cat": "int16",
+  "family_cat": "str"
+ },
+ "buffers": {
+  "AUTOMOTIVE": {
+   "p80": 64.97,
+   "p90": 112.37
+  },
+  "BABY CARE": {
+   "p80": 7.16,
+   "p90": 343.63
+  },
+  "BEAUTY": {
+   "p80": 50.18,
+   "p90": 97.96
+  },
+  "BEVERAGES": {
+   "p80": 9.26,
+   "p90": 19.47
+  },
+  "BOOKS": {
+   "p80": -22.88,
+   "p90": 97.24
+  },
+  "BREAD/BAKERY": {
+   "p80": 11.21,
+   "p90": 19.75
+  },
+  "CELEBRATION": {
+   "p80": 59.09,
+   "p90": 105.97
+  },
+  "CLEANING": {
+   "p80": 8.19,
+   "p90": 18.7
+  },
+  "DAIRY": {
+   "p80": 8.32,
+   "p90": 15.29
+  },
+  "DELI": {
+   "p80": 9.83,
+   "p90": 18.42
+  },
+  "EGGS": {
+   "p80": 21.37,
+   "p90": 39.44
+  },
+  "FROZEN FOODS": {
+   "p80": 19.97,
+   "p90": 37.53
+  },
+  "GROCERY I": {
+   "p80": 9.25,
+   "p90": 16.58
+  },
+  "GROCERY II": {
+   "p80": 65.67,
+   "p90": 114.79
+  },
+  "HARDWARE": {
+   "p80": 136.52,
+   "p90": 258.78
+  },
+  "HOME AND KITCHEN I": {
+   "p80": 42.46,
+   "p90": 78.88
+  },
+  "HOME AND KITCHEN II": {
+   "p80": 34.29,
+   "p90": 63.69
+  },
+  "HOME APPLIANCES": {
+   "p80": 33.66,
+   "p90": 416.74
+  },
+  "HOME CARE": {
+   "p80": 8.58,
+   "p90": 17.91
+  },
+  "LADIESWEAR": {
+   "p80": 39.89,
+   "p90": 82.55
+  },
+  "LAWN AND GARDEN": {
+   "p80": 108.85,
+   "p90": 234.04
+  },
+  "LINGERIE": {
+   "p80": 90.84,
+   "p90": 163.92
+  },
+  "LIQUOR,WINE,BEER": {
+   "p80": 31.71,
+   "p90": 64.21
+  },
+  "MAGAZINES": {
+   "p80": 93.29,
+   "p90": 167.09
+  },
+  "MEATS": {
+   "p80": 13.72,
+   "p90": 23.71
+  },
+  "PERSONAL CARE": {
+   "p80": 11.29,
+   "p90": 21.24
+  },
+  "PET SUPPLIES": {
+   "p80": 80.13,
+   "p90": 155.65
+  },
+  "PLAYERS AND ELECTRONICS": {
+   "p80": 61.64,
+   "p90": 102.83
+  },
+  "POULTRY": {
+   "p80": 13.39,
+   "p90": 23.48
+  },
+  "PREPARED FOODS": {
+   "p80": 17.59,
+   "p90": 31.93
+  },
+  "PRODUCE": {
+   "p80": 9.35,
+   "p90": 15.64
+  },
+  "SCHOOL AND OFFICE SUPPLIES": {
+   "p80": 88.83,
+   "p90": 267.76
+  },
+  "SEAFOOD": {
+   "p80": 42.99,
+   "p90": 93.32
+  }
+ },
+ "forecast_window": [
+  "2017-08-16",
+  "2017-08-31"
+ ]
+}

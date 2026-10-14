@@ -1,0 +1,157 @@
+{
+  "final_features": [
+    "store_cat",
+    "family_cat",
+    "dow",
+    "dom",
+    "is_national_holiday",
+    "is_national_event",
+    "is_earthquake_period",
+    "onpromotion",
+    "same_wd_mean4",
+    "roll28_lag16",
+    "lag_364",
+    "roll7_lag16",
+    "lag_16",
+    "lag_21",
+    "month"
+  ],
+  "categorical_features": [
+    "store_cat",
+    "family_cat"
+  ],
+  "target": "target_log1p (= log1p(sales_clean))",
+  "train_filter": "split == 'train' & is_trainable == 1 & date >= 2015-06-01",
+  "zero_rules": [
+    "is_dead_series",
+    "is_pre_opening",
+    "is_closure_calendar_day"
+  ],
+  "under_recorded_families_lag_mask": [
+    "BEVERAGES",
+    "MAGAZINES",
+    "PRODUCE",
+    "SCHOOL AND OFFICE SUPPLIES"
+  ],
+  "noise": {
+    "WAPE_points": 0.2101,
+    "RMSLE": 0.00166
+  },
+  "section9_pass_groups": [
+    "fam_roll28",
+    "own_trend + fam_trend"
+  ],
+  "section10_confirmed": "False",
+  "lag_source_rule": "masked (NaN) - Section 7b model test",
+  "reference_model": "LightGBM (feature testing only; final model chosen in Phase 06)",
+  "preprocessing_note": "features raw; encoding/scaling/NaN handling per model inside Phase 06 pipelines, fit on train only",
+  "backward_dropped_groups": [
+    "store_type + cluster + city",
+    "is_holiday_season_day"
+  ],
+  "month_added_after_aug2016_test": true,
+  "phase06_todo": [
+    "horizon strategy: single model with lag>=16 vs horizon-specific lags (lag>=h)",
+    "compare model families with own preprocessing",
+    "re-check features if winner is not LightGBM"
+  ],
+  "ablation_decision": {
+    "fam_roll28": {
+      "avg \u0394WAPE": -0.2576,
+      "avg \u0394RMSLE": 0.0005,
+      "faisla": "PASS (tasdeeq Section 10 mein)"
+    },
+    "own_trend + fam_trend": {
+      "avg \u0394WAPE": -0.2324,
+      "avg \u0394RMSLE": 0.001,
+      "faisla": "PASS (tasdeeq Section 10 mein)"
+    },
+    "month": {
+      "avg \u0394WAPE": -0.1969,
+      "avg \u0394RMSLE": -0.0013,
+      "faisla": "Nahi (noise se bara faida nahi)"
+    },
+    "promo_ratio28": {
+      "avg \u0394WAPE": -0.1298,
+      "avg \u0394RMSLE": -0.0005,
+      "faisla": "Nahi (noise se bara faida nahi)"
+    },
+    "state": {
+      "avg \u0394WAPE": -0.0997,
+      "avg \u0394RMSLE": -0.0001,
+      "faisla": "Nahi (noise se bara faida nahi)"
+    },
+    "lag_28": {
+      "avg \u0394WAPE": -0.0937,
+      "avg \u0394RMSLE": -0.0001,
+      "faisla": "Nahi (noise se bara faida nahi)"
+    },
+    "days_since_open": {
+      "avg \u0394WAPE": -0.0833,
+      "avg \u0394RMSLE": 0.0001,
+      "faisla": "Nahi (noise se bara faida nahi)"
+    },
+    "zero_share + std": {
+      "avg \u0394WAPE": -0.0623,
+      "avg \u0394RMSLE": 0.0006,
+      "faisla": "Nahi (noise se bara faida nahi)"
+    },
+    "roll14 + ewm28": {
+      "avg \u0394WAPE": -0.0574,
+      "avg \u0394RMSLE": 0.0,
+      "faisla": "Nahi (noise se bara faida nahi)"
+    },
+    "lag_35 + lag_42": {
+      "avg \u0394WAPE": -0.0535,
+      "avg \u0394RMSLE": 0.0007,
+      "faisla": "Nahi (noise se bara faida nahi)"
+    },
+    "day before holiday": {
+      "avg \u0394WAPE": -0.0278,
+      "avg \u0394RMSLE": 0.0006,
+      "faisla": "Nahi (noise se bara faida nahi)"
+    },
+    "store_holiday_effect": {
+      "avg \u0394WAPE": -0.0201,
+      "avg \u0394RMSLE": -0.0003,
+      "faisla": "Nahi (noise se bara faida nahi)"
+    },
+    "local + regional holiday": {
+      "avg \u0394WAPE": -0.0075,
+      "avg \u0394RMSLE": -0.0,
+      "faisla": "Nahi (noise se bara faida nahi)"
+    },
+    "days_to_month_end": {
+      "avg \u0394WAPE": -0.0024,
+      "avg \u0394RMSLE": -0.0002,
+      "faisla": "Nahi (noise se bara faida nahi)"
+    },
+    "workday override": {
+      "avg \u0394WAPE": NaN,
+      "avg \u0394RMSLE": NaN,
+      "faisla": "Nahi (test window mein active nahi, naapa nahi ja sakta)"
+    },
+    "carnaval sunday": {
+      "avg \u0394WAPE": NaN,
+      "avg \u0394RMSLE": NaN,
+      "faisla": "Nahi (test window mein active nahi, naapa nahi ja sakta)"
+    }
+  },
+  "never_features": [
+    "is_trainable",
+    "is_store_closed",
+    "outlier_cause",
+    "outlier_robust_z",
+    "outlier_action",
+    "is_outlier_treated",
+    "id",
+    "sales",
+    "sales_clean"
+  ],
+  "dropped_in_phase04": [
+    "roll56_lag16",
+    "store_roll28_lag16",
+    "oil_price",
+    "transactions"
+  ]
+}

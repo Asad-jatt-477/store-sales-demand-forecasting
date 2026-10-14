@@ -1,0 +1,11 @@
+date,store_nbr,family,sales,candidate_value,rz,tx_ratio,onpromotion,cause,outlier_action
+2016-05-02,2,GROCERY I,124717.0,6644.37,37.2,1.02,59,H5 Isolated spike (bulk order / ghalat entry),cap
+2016-10-07,39,MEATS,89576.36,344.43,44.84,1.07,0,H5 Isolated spike (bulk order / ghalat entry),cap
+2016-04-26,2,GROCERY I,63434.0,5964.85,30.96,1.0,30,H5 Isolated spike (bulk order / ghalat entry),cap
+2015-12-14,35,GROCERY I,40351.46,4592.43,19.26,0.91,7,H5 Isolated spike (bulk order / ghalat entry),cap
+2017-04-02,9,GROCERY I,38422.62,22232.14,8.45,1.0,73,H5 Isolated spike (bulk order / ghalat entry),cap
+2016-07-04,20,GROCERY I,37514.93,12583.39,11.3,1.1,40,H5 Isolated spike (bulk order / ghalat entry),cap
+2015-12-04,24,GROCERY I,35828.0,6401.37,25.86,1.0,28,H5 Isolated spike (bulk order / ghalat entry),cap
+2015-11-11,2,GROCERY I,33274.0,5818.23,24.15,1.01,23,H5 Isolated spike (bulk order / ghalat entry),cap
+2016-06-27,20,GROCERY I,29490.85,11036.1,10.67,0.91,28,H5 Isolated spike (bulk order / ghalat entry),cap
+2016-06-17,20,GROCERY I,28998.66,9432.16,11.48,1.0,39,H5 Isolated spike (bulk order / ghalat entry),cap

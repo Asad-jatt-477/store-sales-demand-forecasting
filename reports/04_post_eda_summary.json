@@ -1,0 +1,150 @@
+{
+  "pattern_stability": [
+    {
+      "pattern": "weekday",
+      "corr (saari rows vs extremes ke baghair)": 1.0,
+      "max farq (% points)": 0.3594
+    },
+    {
+      "pattern": "mahine ki tareekh",
+      "corr (saari rows vs extremes ke baghair)": 0.9988,
+      "max farq (% points)": 0.7566
+    }
+  ],
+  "history_features": {
+    "lag_16": {
+      "global corr": 0.9613,
+      "within-series corr": 0.108,
+      "available %": 98.7292
+    },
+    "lag_21": {
+      "global corr": 0.9686,
+      "within-series corr": 0.2896,
+      "available %": 98.7241
+    },
+    "lag_28": {
+      "global corr": 0.9674,
+      "within-series corr": 0.2749,
+      "available %": 98.4734
+    },
+    "lag_35": {
+      "global corr": 0.9663,
+      "within-series corr": 0.2506,
+      "available %": 98.1084
+    },
+    "lag_42": {
+      "global corr": 0.9657,
+      "within-series corr": 0.2388,
+      "available %": 97.7494
+    },
+    "lag_364": {
+      "global corr": 0.9653,
+      "within-series corr": 0.2594,
+      "available %": 87.4394
+    },
+    "roll7_lag16": {
+      "global corr": 0.9752,
+      "within-series corr": 0.2111,
+      "available %": 99.4285
+    },
+    "roll14_lag16": {
+      "global corr": 0.976,
+      "within-series corr": 0.21,
+      "available %": 99.2907
+    },
+    "roll28_lag16": {
+      "global corr": 0.9762,
+      "within-series corr": 0.1948,
+      "available %": 99.0109
+    },
+    "roll56_lag16": {
+      "global corr": 0.9775,
+      "within-series corr": 0.1858,
+      "available %": 98.2688
+    },
+    "ewm28_lag16": {
+      "global corr": 0.9779,
+      "within-series corr": 0.209,
+      "available %": 99.7231
+    },
+    "same_wd_mean4": {
+      "global corr": 0.9766,
+      "within-series corr": 0.3454,
+      "available %": 99.275
+    }
+  },
+  "incremental_after_base": {
+    "lag_364": 0.1799,
+    "roll7_lag16": 0.1378,
+    "roll14_lag16": 0.1244,
+    "ewm28_lag16": 0.0917,
+    "lag_16": 0.0841,
+    "lag_21": 0.0665,
+    "lag_28": 0.0173,
+    "roll56_lag16": -0.0162,
+    "lag_35": -0.0377,
+    "lag_42": -0.0468
+  },
+  "dow_effect_pct": {
+    "0": -5.52,
+    "1": -8.32,
+    "2": -8.33,
+    "3": -12.94,
+    "4": -2.81,
+    "5": 23.48,
+    "6": 21.46
+  },
+  "dom_effect_pct": {
+    "1": 18.13,
+    "2": 12.49,
+    "3": 9.97,
+    "4": 7.1,
+    "5": 3.08,
+    "6": 1.86,
+    "7": -0.59,
+    "8": -1.76,
+    "9": -2.17,
+    "10": -2.82,
+    "11": -3.96,
+    "12": -3.69,
+    "13": -3.95,
+    "14": -5.01,
+    "15": -0.19,
+    "16": 1.93,
+    "17": 0.25,
+    "18": -1.06,
+    "19": -2.52,
+    "20": 0.35,
+    "21": -0.54,
+    "22": -1.3,
+    "23": 0.22,
+    "24": -1.25,
+    "25": -4.15,
+    "26": -5.34,
+    "27": -5.6,
+    "28": -4.28,
+    "29": -3.42,
+    "30": -0.03,
+    "31": 6.19
+  },
+  "holiday_effect_by_store_range_pct": [
+    -50.67,
+    93.77
+  ],
+  "promo_curve_pct": {
+    "<0.5x": -3.84,
+    "0.5-0.9x": -2.06,
+    "~1x (normal)": 0.39,
+    "1.1-1.5x": 5.39,
+    "1.5-2x": 6.9,
+    "2-3x": 6.61,
+    ">3x": 5.03
+  },
+  "feature_plan_counts": {
+    "Ablation": 16,
+    "Keep": 15,
+    "Drop": 4,
+    "Rule (feature nahi)": 1,
+    "Never": 1
+  }
+}

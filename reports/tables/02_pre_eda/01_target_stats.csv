@@ -1,0 +1,10 @@
+,sales (clean demand rows)
+rows,1308738.0
+mean,484.061
+median,33.0
+p90,1263.0
+p99,6846.0
+max,124717.0
+zero share,0.121
+skewness (raw),6.739
+skewness (log1p),0.164

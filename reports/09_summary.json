@@ -1,0 +1,167 @@
+{
+  "phase": "09",
+  "kaggle_score": null,
+  "window_summary": [
+    {
+      "window": "Aug 2016",
+      "WAPE model": 12.9278,
+      "WAPE naive": 15.1697,
+      "RMSLE model": 0.4175,
+      "forecast/actual": 1.0604
+    },
+    {
+      "window": "Dec 2016",
+      "WAPE model": 13.9555,
+      "WAPE naive": 19.2158,
+      "RMSLE model": 0.4413,
+      "forecast/actual": 1.0071
+    },
+    {
+      "window": "Holdout (15 Jul-30 Jul 2017)",
+      "WAPE model": 11.7289,
+      "WAPE naive": 13.7303,
+      "RMSLE model": 0.3976,
+      "forecast/actual": 0.9439
+    },
+    {
+      "window": "Jun 2017",
+      "WAPE model": 10.6862,
+      "WAPE naive": 13.3633,
+      "RMSLE model": 0.3838,
+      "forecast/actual": 0.9713
+    },
+    {
+      "window": "May 2016",
+      "WAPE model": 15.5651,
+      "WAPE naive": 19.5248,
+      "RMSLE model": 0.4396,
+      "forecast/actual": 1.0188
+    },
+    {
+      "window": "Validation (Aug 2017)",
+      "WAPE model": 11.4456,
+      "WAPE naive": 18.3097,
+      "RMSLE model": 0.397,
+      "forecast/actual": 0.9934
+    }
+  ],
+  "systematic_under_families": [
+    "GROCERY II",
+    "CELEBRATION",
+    "LAWN AND GARDEN",
+    "AUTOMOTIVE",
+    "PET SUPPLIES",
+    "MAGAZINES",
+    "HARDWARE",
+    "BABY CARE"
+  ],
+  "systematic_over_families": [],
+  "stores_worse_than_naive": [],
+  "horizon_slope_points_per_day": 0.3112786810332932,
+  "bias_by_year": {
+    "2016": 1.0271,
+    "2017": 0.9692
+  },
+  "growth_vs_bias": [
+    {
+      "window": "Jun 2017",
+      "forecast/actual": 0.9713,
+      "growth YoY (28 din)": 1.1418,
+      "growth pichle 28 din se": 1.008
+    },
+    {
+      "window": "Aug 2016",
+      "forecast/actual": 1.0604,
+      "growth YoY (28 din)": 1.0331,
+      "growth pichle 28 din se": 0.983
+    },
+    {
+      "window": "Dec 2016",
+      "forecast/actual": 1.0071,
+      "growth YoY (28 din)": 1.0823,
+      "growth pichle 28 din se": 1.0731
+    },
+    {
+      "window": "May 2016",
+      "forecast/actual": 1.0188,
+      "growth YoY (28 din)": NaN,
+      "growth pichle 28 din se": 1.0246
+    },
+    {
+      "window": "Validation (Aug 2017)",
+      "forecast/actual": 0.9934,
+      "growth YoY (28 din)": 1.1579,
+      "growth pichle 28 din se": 0.9863
+    },
+    {
+      "window": "Holdout (15 Jul-30 Jul 2017)",
+      "forecast/actual": 0.9439,
+      "growth YoY (28 din)": 1.1329,
+      "growth pichle 28 din se": 0.9642
+    }
+  ],
+  "permutation_importance": {
+    "sales history (sab lags)": 100.2874,
+    "roll7_lag16": 46.6233,
+    "store + family": 32.8554,
+    "family_cat": 28.2458,
+    "same_wd_mean4": 24.9003,
+    "lag_21": 14.0758,
+    "roll28_lag16": 11.0593,
+    "store_cat": 4.6402,
+    "calendar (dow, dom, month)": 4.5247,
+    "dom": 4.3338,
+    "lag_364": 3.7841,
+    "dow": 1.6271,
+    "onpromotion": 1.4127,
+    "lag_16": 1.072,
+    "is_national_holiday": 0.8345,
+    "holiday/event flags": 0.7043,
+    "month": 0.1218,
+    "is_national_event": 0.0,
+    "is_earthquake_period": 0.0
+  },
+  "business": [
+    {
+      "group": "sab families",
+      "asli units": 79342582.4,
+      "overstock model": 4960796.8,
+      "overstock naive": 6438520.4,
+      "understock model": 5122271.9,
+      "understock naive": 6725628.3,
+      "overstock kami %": 23.0,
+      "understock kami %": 23.8
+    },
+    {
+      "group": "kharab hone wali",
+      "asli units": 26214754.3,
+      "overstock model": 1480075.7,
+      "overstock naive": 1806930.8,
+      "understock model": 1289056.1,
+      "understock naive": 1533339.9,
+      "overstock kami %": 18.1,
+      "understock kami %": 15.9
+    },
+    {
+      "group": "baqi",
+      "asli units": 53127828.1,
+      "overstock model": 3480721.1,
+      "overstock naive": 4631589.6,
+      "understock model": 3833215.8,
+      "understock naive": 5192288.5,
+      "overstock kami %": 24.8,
+      "understock kami %": 26.2
+    }
+  ],
+  "perishable_families_by_name": [
+    "PRODUCE",
+    "DAIRY",
+    "MEATS",
+    "POULTRY",
+    "SEAFOOD",
+    "BREAD/BAKERY",
+    "EGGS",
+    "DELI",
+    "PREPARED FOODS"
+  ]
+}

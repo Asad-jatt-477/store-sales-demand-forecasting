@@ -1,0 +1,13 @@
+date,weekday,holiday,tx_ratio,store_lo3
+2015-08-10,Monday,Primer Grito de Independencia,0.27,0.76
+2015-10-09,Friday,Independencia de Guayaquil,0.31,0.62
+2015-11-02,Monday,Dia de Difuntos,0.24,0.72
+2015-11-03,Tuesday,Independencia de Cuenca,0.29,0.5
+2016-05-27,Friday,Traslado Batalla de Pichincha,0.33,0.66
+2016-08-12,Friday,Traslado Primer Grito de Independencia,0.3,0.59
+2016-11-02,Wednesday,Dia de Difuntos,0.28,0.62
+2016-11-03,Thursday,Independencia de Cuenca,0.26,0.66
+2016-12-06,Tuesday,,0.29,0.62
+2016-12-26,Monday,Navidad+1,0.27,0.69
+2017-01-02,Monday,Traslado Primer dia del ano,0.28,0.59
+2017-02-28,Tuesday,Carnaval,0.3,0.59

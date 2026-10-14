@@ -1,0 +1,7 @@
+final_action,rows
+none,1300464
+keep_real_event,6296
+replace_stockout_rejected_by_test,961
+cap_rejected_by_test,806
+keep_natural_low,144
+replace_disruption_rejected_by_test,67

@@ -1,0 +1,55 @@
+{
+  "training_period": [
+    "2013-01-01",
+    "2017-07-30"
+  ],
+  "demand_rows": 2338769,
+  "target": {
+    "median": 33.0,
+    "zero_share": 0.1214,
+    "skew_raw": 6.74,
+    "skew_log1p": 0.16
+  },
+  "day_of_week_index": {
+    "Mon": 0.963,
+    "Tue": 0.9,
+    "Wed": 0.945,
+    "Thu": 0.792,
+    "Fri": 0.917,
+    "Sat": 1.198,
+    "Sun": 1.287
+  },
+  "december_index": 1.182,
+  "clean_start": "2015-06-01",
+  "partial_recording_days_in_history": 640,
+  "top3_family_share_pct": 66.8,
+  "demand_classes_pct_series": {
+    "Smooth": 67.2,
+    "Erratic": 17.2,
+    "Intermittent": 10.3,
+    "Lumpy": 5.3
+  },
+  "demand_classes_pct_units": {
+    "Smooth": 96.9,
+    "Erratic": 3.1,
+    "Intermittent": 0.0,
+    "Lumpy": 0.0
+  },
+  "median_promo_lift_pct": 14.2,
+  "oil_corr_levels": -0.77,
+  "oil_corr_changes": 0.02,
+  "acf": {
+    "lag_1": 0.365,
+    "lag_7": 0.392,
+    "lag_16": 0.11,
+    "lag_21": 0.302,
+    "lag_28": 0.288,
+    "lag_364": 0.232
+  },
+  "outliers_first_look": {
+    "rows_checked": 1153992,
+    "extreme_rows": 8267,
+    "high": 5614,
+    "low": 2653
+  }
+}

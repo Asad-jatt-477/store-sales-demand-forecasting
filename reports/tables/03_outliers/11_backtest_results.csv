@@ -1,0 +1,7 @@
+,Validation (Aug 2017),Validation (Aug 2017),Validation (Aug 2017),Zalzale ke baad (May 2016),Zalzale ke baad (May 2016),Zalzale ke baad (May 2016),Christmas se pehle (Dec 2016),Christmas se pehle (Dec 2016),Christmas se pehle (Dec 2016),Aam window (Jun 2017),Aam window (Jun 2017),Aam window (Jun 2017)
+,WAPE %,RMSLE,forecast / actual,WAPE %,RMSLE,forecast / actual,WAPE %,RMSLE,forecast / actual,WAPE %,RMSLE,forecast / actual
+variant,,,,,,,,,,,,
+Raw,12.5677,0.3957,1.0089,17.4768,0.5047,1.0618,14.9467,0.4489,1.0082,11.0012,0.3867,0.9895
+"Raw (seed 1, noise check)",12.583,0.3992,1.0069,17.3531,0.4943,1.0585,14.7172,0.4466,1.006,11.0449,0.387,0.9886
+Cap (H5),12.6193,0.3977,1.0072,17.8199,0.4973,1.0684,15.0439,0.4474,1.003,11.0175,0.3862,0.9855
+Replace (L4 + L0),12.5534,0.3974,1.0067,17.4931,0.4845,1.058,14.8043,0.4465,0.9989,11.025,0.3864,0.9866
