@@ -15,18 +15,10 @@
 
 ## Overview
 
-The **Retail Demand Forecasting System** predicts how many units of each product family will sell in each of 54 stores on every one of the next 16 days. It is built on 4.5 years of daily sales (January 2013 to August 2017) from the Kaggle *Store Sales – Time Series Forecasting* dataset.
-
-The project covers the complete journey from raw data to a working product: data preparation, exploratory analysis, outlier review, feature engineering, model comparison, hyperparameter tuning, a final forecast and a business evaluation. The trained model is served through a live dashboard, where a planner can change the promotion plan or mark a holiday and see the forecast recalculated instantly.
-
-| Result | Model | Seasonal baseline |
-|---|:---:|:---:|
-| Forecast error on an untouched holdout window (WAPE) | **11.73%** | 13.73% |
-| Forecast error on the validation window (WAPE) | **11.45%** | 18.31% |
-| Over-ordered units (6 backtest windows) | **4.96M** (23% fewer) | 6.44M |
-| Units missing from the shelf (6 backtest windows) | **5.12M** (24% fewer) | 6.73M |
-
-The model is more accurate than the seasonal baseline in **all 33 product families** and **all 54 stores**.
+The **Retail Demand Forecasting System** predicts daily unit sales for 33 product families across 54 stores, 16 days ahead.
+It is built on 4.5 years of daily sales (2013–2017) from the Kaggle *Store Sales – Time Series Forecasting* dataset.
+The complete pipeline covers data preparation, outlier review, feature engineering, model comparison, tuning and business evaluation.
+The trained model powers a live dashboard where planners can test promotions and holidays and see the forecast update instantly.
 
 ## Aim
 
@@ -67,6 +59,8 @@ Simple rules of thumb, such as repeating the average of the same weekday in rece
 <p align="center">
   <img src="docs/architecture.png" alt="System Architecture — Retail Demand Forecasting System" width="100%">
 </p>
+
+## Application Screenshots
 
 <p align="center">
   <img src="docs/screenshots/overview.png" alt="Dashboard overview" width="49%">
