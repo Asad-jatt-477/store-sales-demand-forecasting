@@ -23,9 +23,10 @@ The project covers the complete journey from raw data to a working product: data
 |---|:---:|:---:|
 | Forecast error on an untouched holdout window (WAPE) | **11.73%** | 13.73% |
 | Forecast error on the validation window (WAPE) | **11.45%** | 18.31% |
-| Over-ordered units (6 backtest windows) | **23% lower** | — |
-| Units missing from the shelf (6 backtest windows) | **24% lower** | — |
-| Product families / stores where the model is more accurate | **33 of 33 / 54 of 54** | — |
+| Over-ordered units (6 backtest windows) | **4.96M** (23% fewer) | 6.44M |
+| Units missing from the shelf (6 backtest windows) | **5.12M** (24% fewer) | 6.73M |
+
+The model is more accurate than the seasonal baseline in **all 33 product families** and **all 54 stores**.
 
 ## Aim
 
